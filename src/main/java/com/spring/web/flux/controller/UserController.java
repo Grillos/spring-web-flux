@@ -17,6 +17,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 
+/**
+ * @author robson
+ *
+ */
 @RestController
 @RequestMapping(value = "/v1")
 public class UserController {
