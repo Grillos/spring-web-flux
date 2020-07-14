@@ -32,7 +32,7 @@ public class UserController {
 	@ApiResponses({
 			@ApiResponse(code = 200, message = "Find user request successfully executed", response = User.class),
 			@ApiResponse(code = 404, message = "The request resource was not found") })
-    @GetMapping(value = "/orders", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @GetMapping(value = "/users", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Tuple2<Long, User>> findAll() {
     	return service.findAll();
     }
