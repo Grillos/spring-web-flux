@@ -28,6 +28,10 @@ public class UserService {
 		return Flux.zip(interval, users);
 	}
 	
+	public Mono<User> findById(Long id) {
+		return repository.findById(id);
+	}
+	
 	public Mono<User> create(UserRequest request) {
 		User user = new User(request);
 		user.setId(new Random().nextLong());
